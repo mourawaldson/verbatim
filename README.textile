@@ -1,0 +1,3 @@
+h1. Translate It
+
+h2. A Google Chrome extension to translate selected text with right click!
