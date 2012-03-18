@@ -22,4 +22,4 @@ function translate(info) {
     openUrl(url, true);
 }
 
-chrome.contextMenus.create({"title": "Google Translate '%s'", "contexts":["selection"], "onclick": translate});
+chrome.contextMenus.create({"title": "Translate '%s'", "contexts":["selection"], "onclick": translate});
