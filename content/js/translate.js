@@ -26,5 +26,5 @@ var Verbatim = {
 
 document.addEventListener("DOMContentLoaded", function () {
 	Verbatim.setDefaultSettings();
-	chrome.contextMenus.create({"title": "Translate '%s'", "contexts":["selection"], "onclick": Verbatim.translate});
+	chrome.contextMenus.create({"title": chrome.i18n.getMessage('translate') + " '%s'", "contexts":["selection"], "onclick": Verbatim.translate});
 });
