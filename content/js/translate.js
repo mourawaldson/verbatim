@@ -1,6 +1,6 @@
 var Verbatim = {
 	setDefaultSettings: function () {
-		localStorage['dl'] = 'en';
+		localStorage['dl'] = 'pt';
 		localStorage['vm'] = 'tc';
 
 		var ft = false;
