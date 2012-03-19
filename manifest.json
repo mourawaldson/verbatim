@@ -10,12 +10,6 @@
         "48": "content/images/verbatim-48.png",
         "128": "content/images/verbatim-128.png"
     },
-    "content_scripts": [ {
-        "css": ["content/css/settings.css"],
-        "js": ["content/js/settings.js", "content/js/translate.js"],
-        "matches": [ "http://*/*", "https://*/*" ],
-        "run_at": "document_end"
-    } ],
     "minimum_chrome_version": "6.0.0.0",
     "content_security_policy": "default-src 'self' 'unsafe-inline'"
 }
