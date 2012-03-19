@@ -1,11 +1,13 @@
 function save() {
     var sl = document.getElementById('languages');
-        localStorage['dl'] = sl.options[sl.selectedIndex].value;
+    localStorage['dl'] = sl.options[sl.selectedIndex].value;
+    
     var svm = document.getElementById('view-mode');
-        localStorage['vm'] = svm.options[svm.selectedIndex].value;
+    localStorage['vm'] = svm.options[svm.selectedIndex].value;
 
     var message = document.getElementById('message');
     message.innerHTML = chrome.i18n.getMessage('automatic_save');
+    
     setTimeout(function() {
         message.innerHTML = '';
     }, 1000);
