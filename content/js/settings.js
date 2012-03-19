@@ -4,7 +4,11 @@ function save() {
     var svm = document.getElementById('languages');
         localStorage['vm'] = svm.options[svm.selectedIndex].value;
 
-    
+    var message = document.getElementById('message');
+    message.innerHTML = chrome.i18n.getMessage('automatic_save');
+    setTimeout(function() {
+        message.innerHTML = '';
+    }, 1000);
 }
 
 function load() {
