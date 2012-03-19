@@ -1,7 +1,7 @@
 function save() {
     var sl = document.getElementById('languages');
         localStorage['dl'] = sl.options[sl.selectedIndex].value;
-    var svm = document.getElementById('languages');
+    var svm = document.getElementById('view-mode');
         localStorage['vm'] = svm.options[svm.selectedIndex].value;
 
     var message = document.getElementById('message');
