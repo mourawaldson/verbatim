@@ -1,12 +1,13 @@
 <html>
         <head>
             <title>Configurations</title>
+            <script src="js/settings.js"></script>
         </head>
         <body onload="load()">
                 <h3>Configurations</h3>
                 <form>
                         <label for="languages">Translate for:</label>
-                        <select id="languages" tabindex="0">
+                        <select id="languages" tabindex="0" onchange="save()">
                                 <option value='af'>Afrikaans</option>
                                 <option value='sq'>Albanian</option>
                                 <option value='ar'>Arabic</option>
@@ -74,12 +75,12 @@
                                 <option value='yi'>Yiddish</option>
                         </select>
                         <label for="view-mode">View mode:</label>
-                        <select id="view-mode">
+                        <select id="view-mode" tabindex="1" onchange="save()">
                                 <option value='tc'>Translate in context</option>
                                 <option value='ont'>Open new tab</option>
                                 <option value='ognt'>Open and go to new tab</option>
                         </select>
-                        <button onclick="save()">Save</button>
+                        <p id="message"></p>
                 </form>
         </body>
 </html>
