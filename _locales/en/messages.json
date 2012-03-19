@@ -9,7 +9,7 @@
    },
    "automatic_save": {
       "description": "Message to automatic save.",
-      "message": "Settings saved"
+      "message": "Settings saved."
    },
    "translate": {
       "description": "Right click context option.",
