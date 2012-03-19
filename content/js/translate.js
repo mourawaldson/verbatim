@@ -11,7 +11,7 @@ var Verbatim = {
 		}
 
 		if (ft) {
-		    Verbatim.openUrl('../settings.html', true);
+		    Verbatim.openUrl('./content/settings.html', true);
 		}
 	},
 	openUrl: function(url, selected) {
