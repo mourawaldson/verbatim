@@ -1,0 +1,22 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Just select the text and click the right mouse button!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Settings saved."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Translate"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Settings"
+   }
+}

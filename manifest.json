@@ -1,13 +1,14 @@
 {
-    "name": "Verbatim",
-    "description": "Just select the text and press right click button, using Google Translate! verbatim.translatio@gmail.com",
+    "default_locale": "en",
+    "name": "__MSG_name__",
+    "description": "__MSG_description__",
     "version": "1.0",
     "permissions": ["contextMenus", "tabs"],
-    "background_page": "background.html",
-    "options_page": "options.html",
+    "background_page": "content/background.html",
+    "options_page": "content/settings.html",
     "icons": {
-        "48": "images/verbatim-48.png",
-        "128": "images/verbatim-128.png"
+        "48": "content/images/verbatim-48.png",
+        "128": "content/images/verbatim-128.png"
     },
     "minimum_chrome_version": "6.0.0.0",
     "content_security_policy": "default-src 'self' 'unsafe-inline'"

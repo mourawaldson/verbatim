@@ -1,0 +1,22 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Apenas selecione o texto e clique com o botão direito do mouse!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Configurações salvas."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Traduzir"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Configurações"
+   }
+}
