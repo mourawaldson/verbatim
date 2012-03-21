@@ -1,13 +1,13 @@
 <html>
         <head>
             <title>Configurations</title>
-            <script src="js/settings.js"></script>
+            <script src="js/translate.js"></script>
         </head>
-        <body onload="load()">
+        <body onload="Verbatim.settings.load()">
                 <h3>Configurations</h3>
                 <form>
                         <label for="languages">Translate for:</label>
-                        <select id="languages" tabindex="0" onchange="save()">
+                        <select id="languages" tabindex="0" onchange="Verbatim.settings.save()">
                                 <option value='af'>Afrikaans</option>
                                 <option value='sq'>Albanian</option>
                                 <option value='ar'>Arabic</option>
@@ -75,7 +75,7 @@
                                 <option value='yi'>Yiddish</option>
                         </select>
                         <label for="view-mode">View mode:</label>
-                        <select id="view-mode" tabindex="1" onchange="save()">
+                        <select id="view-mode" tabindex="1" onchange="Verbatim.settings.save()">
                                 <option value='tc'>Translate in context</option>
                                 <option value='ont'>Open new tab</option>
                                 <option value='ognt'>Open and go to new tab</option>
