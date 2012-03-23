@@ -1,16 +1,16 @@
 var Verbatim = {
-    openUrl: function (url, selected) {
+    openUrl: function(url, selected) {
         chrome.tabs.create({
             "url": url,
             "selected": selected
         });
     },
-    translate: function (info) {
+    translate: function(info) {
         var dl = localStorage.getItem('dl');
         var url = "http://translate.google.com/#auto|" + dl + "|" + info.selectionText;
         Verbatim.openUrl(url, true);
     },
-    createContextMenu: function () {
+    createContextMenu: function() {
         chrome.contextMenus.create({
             "title": chrome.i18n.getMessage('translate') + " '%s'",
             "contexts": ["selection"],
@@ -18,7 +18,7 @@ var Verbatim = {
         });
     },
     settings: {
-        setDefault: function () {
+        setDefault: function() {
             localStorage['dl'] = 'pt';
             localStorage['vm'] = 'tc';
 
@@ -33,7 +33,7 @@ var Verbatim = {
                 Verbatim.openUrl('./content/settings.html', true);
             }
         },
-        load: function () {
+        load: function() {
             var sl = document.getElementById('languages');
             var dl = localStorage.getItem('dl');
 
@@ -54,7 +54,7 @@ var Verbatim = {
                 }
             }
         },
-        save: function () {
+        save: function() {
             var sl = document.getElementById('languages');
             localStorage['dl'] = sl.options[sl.selectedIndex].value;
 
@@ -64,7 +64,7 @@ var Verbatim = {
             var message = document.getElementById('message');
             message.innerHTML = chrome.i18n.getMessage('automatic_save');
 
-            setTimeout(function () {
+            setTimeout(function() {
                 message.innerHTML = '';
             }, 1000);
         }
