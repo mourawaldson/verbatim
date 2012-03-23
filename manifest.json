@@ -3,7 +3,7 @@
     "name": "__MSG_name__",
     "description": "__MSG_description__",
     "version": "1.0.0",
-    "permissions": ["contextMenus", "tabs"],
+    "permissions": ["contextMenus"],
     "background_page": "content/background.html",
     "options_page": "content/settings.html",
     "icons": {
@@ -11,6 +11,5 @@
         "48": "content/images/verbatim-48x48.png",
         "128": "content/images/verbatim-128x128-app.png"
     },
-    "minimum_chrome_version": "6.0.0.0",
-    "content_security_policy": "default-src 'self' 'unsafe-inline'"
+    "minimum_chrome_version": "6.0.0.0"
 }
