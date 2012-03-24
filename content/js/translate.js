@@ -5,9 +5,6 @@ var Verbatim = {
             "selected": selected
         });
     },
-    getElement: function(id) {
-        return document.getElementById(id);
-    },
     getSelectedValue: function(select) {
         return select.options[select.selectedIndex].value
     },
@@ -57,15 +54,15 @@ var Verbatim = {
         },
         init: function() {
             var title = chrome.i18n.getMessage('name') + ' - ' + chrome.i18n.getMessage('settings');
-            var content_title = Verbatim.getElement('title');
+            var content_title = document.querySelector('#title');
 
             document.title = title;
             content_title.innerHTML = title;
 
-            var sl = Verbatim.getElement('languages');
+            var sl = document.querySelector('#languages');
             var dl = Verbatim.localStorage.getValue('dl');
 
-            var svm = Verbatim.getElement('view-mode');
+            var svm = document.querySelector('#view-mode');
             var vm = Verbatim.localStorage.getValue('vm');
 
             if (!dl) dl = 'pt';
@@ -75,13 +72,13 @@ var Verbatim = {
             Verbatim.setSelectedValue(svm, vm);
         },
         save: function() {
-            var sl = Verbatim.getElement('languages');
+            var sl = document.querySelector('#languages');
             Verbatim.localStorage.save('dl', Verbatim.getSelectedValue(sl));
 
-            var svm = Verbatim.getElement('view-mode');
+            var svm = document.querySelector('#view-mode');
             Verbatim.localStorage.save('vm', Verbatim.getSelectedValue(svm));
 
-            var message = Verbatim.getElement('message');
+            var message = document.querySelector('#message');
             message.innerHTML = chrome.i18n.getMessage('automatic_save');
 
             setTimeout(function() {
