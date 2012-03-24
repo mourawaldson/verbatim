@@ -26,5 +26,17 @@
    "view_mode": {
       "description": "View mode label.",
       "message": "Modalità di visualizzazione:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open new tab option.",
+      "message": "Aprire nuova scheda"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to new option.",
+      "message": "Aprire e vai alla nuova scheda"
    }
 }

@@ -74,8 +74,17 @@ var Verbatim = {
 
             var svm = document.querySelector('#view-mode');
             var vm = Verbatim.localStorage.getValue('vm');
-            if (!vm) vm = 'ognt';
-            Verbatim.setSelectedValue(svm, vm);
+
+            var tt_value = 'tt';
+            var tt_selected = (vm == tt_value) ? true : false;
+            var ont_value = 'ont';
+            var ont_selected = (vm == ont_value) ? true : false;
+            var ognt_value = 'ognt';
+            var ognt_selected = (vm == ognt_value || !vm) ? true : false;
+
+            svm.options[0] = new Option(chrome.i18n.getMessage('view_mode_tt'), tt_value, false, tt_selected);
+            svm.options[1] = new Option(chrome.i18n.getMessage('view_mode_ont'), ont_value, false, ont_selected);
+            svm.options[2] = new Option(chrome.i18n.getMessage('view_mode_ognt'), ognt_value, false, ognt_selected);
         },
         save: function() {
             var sl = document.querySelector('#languages');
