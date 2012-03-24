@@ -5,8 +5,22 @@ var Verbatim = {
             "selected": selected
         });
     },
+    getElement: function(id) {
+        return document.getElementById(id);
+    },
+    getSelectedValue: function(select) {
+        return select.options[select.selectedIndex].value
+    },
+    setSelectedValue: function(select, value) {
+        for (var i = 0; i < select.options.length; i++) {
+            if (select.options[i].value == value) {
+                select.options[i].selected = true;
+                break;
+            }
+        }
+    },
     translate: function(info) {
-        var dl = localStorage.getItem('dl');
+        var dl = Verbatim.localStorage.getValue('dl');
         var url = "http://translate.google.com/#auto|" + dl + "|" + info.selectionText;
         Verbatim.openUrl(url, true);
     },
@@ -17,15 +31,26 @@ var Verbatim = {
             "onclick": Verbatim.translate
         });
     },
+    localStorage: {
+        save: function(name, value) {
+            localStorage[name] = value;
+        },
+        getValue: function(name) {
+            return localStorage.getItem(name);
+        },
+        exists: function(name) {
+            return (localStorage[name]) ? true : false;
+        }
+    },
     settings: {
         setDefault: function() {
-            localStorage['dl'] = 'pt';
-            localStorage['vm'] = 'tc';
+            Verbatim.localStorage.save('dl', 'pt');
+            Verbatim.localStorage.save('vm', 'tc');
 
             var ft = false;
 
-            if (!localStorage['ft']) {
-                localStorage['ft'] = ft;
+            if (!Verbatim.localStorage.exists('ft')) {
+                Verbatim.localStorage.save('ft', ft);
                 ft = true;
             }
 
@@ -34,34 +59,24 @@ var Verbatim = {
             }
         },
         load: function() {
-            var sl = document.getElementById('languages');
-            var dl = localStorage.getItem('dl');
+            var sl = Verbatim.getElement('languages');
+            var dl = Verbatim.localStorage.getValue('dl');
 
-            for (var i = 0; i < sl.options.length; i++) {
-                if (sl.options[i].value == dl) {
-                    sl.options[i].selected = true;
-                    break;
-                }
-            }
+            Verbatim.setSelectedValue(sl, dl);
 
-            var svm = document.getElementById('view-mode');
-            var vm = localStorage.getItem('vm');
+            var svm = Verbatim.getElement('view-mode');
+            var vm = Verbatim.localStorage.getValue('vm');
 
-            for (var i = 0; i < svm.options.length; i++) {
-                if (svm.options[i].value == vm) {
-                    svm.options[i].selected = true;
-                    break;
-                }
-            }
+            Verbatim.setSelectedValue(svm, vm);
         },
         save: function() {
-            var sl = document.getElementById('languages');
-            localStorage['dl'] = sl.options[sl.selectedIndex].value;
+            var sl = Verbatim.getElement('languages');
+            Verbatim.localStorage.save('dl', Verbatim.getSelectedValue(sl));
 
-            var svm = document.getElementById('view-mode');
-            localStorage['vm'] = svm.options[svm.selectedIndex].value;
+            var svm = Verbatim.getElement('view-mode');
+            Verbatim.localStorage.save('vm', Verbatim.getSelectedValue(svm));
 
-            var message = document.getElementById('message');
+            var message = Verbatim.getElement('message');
             message.innerHTML = chrome.i18n.getMessage('automatic_save');
 
             setTimeout(function() {
