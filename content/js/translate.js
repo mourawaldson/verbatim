@@ -44,9 +44,6 @@ var Verbatim = {
     },
     settings: {
         setDefault: function() {
-            Verbatim.localStorage.save('dl', 'pt');
-            Verbatim.localStorage.save('vm', 'tc');
-
             var ft = false;
 
             if (!Verbatim.localStorage.exists('ft')) {
@@ -62,11 +59,13 @@ var Verbatim = {
             var sl = Verbatim.getElement('languages');
             var dl = Verbatim.localStorage.getValue('dl');
 
-            Verbatim.setSelectedValue(sl, dl);
-
             var svm = Verbatim.getElement('view-mode');
             var vm = Verbatim.localStorage.getValue('vm');
 
+            if (!dl) dl = 'pt';
+            if (!vm) vm = 'ognt';
+
+            Verbatim.setSelectedValue(sl, dl);
             Verbatim.setSelectedValue(svm, vm);
         },
         save: function() {
