@@ -80,7 +80,7 @@ var Verbatim = {
 
             setTimeout(function() {
                 message.innerHTML = '';
-            }, 1000);
+            }, 1200);
         }
 
     }
