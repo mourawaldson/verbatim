@@ -55,7 +55,7 @@ var Verbatim = {
                 Verbatim.openUrl('./content/settings.html', true);
             }
         },
-        load: function() {
+        init: function() {
             var title = chrome.i18n.getMessage('name') + ' - ' + chrome.i18n.getMessage('settings');
             var h3_title = Verbatim.getElement('title');
 
