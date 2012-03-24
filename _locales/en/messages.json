@@ -18,5 +18,25 @@
    "settings": {
       "description": "Settings label.",
       "message": "Settings"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Translate to:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "View mode:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open new tab option.",
+      "message": "Open new tab"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to new option.",
+      "message": "Open and go to new tab"
    }
 }
