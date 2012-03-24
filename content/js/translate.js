@@ -19,8 +19,12 @@ var Verbatim = {
     },
     translate: function(info) {
         var dl = Verbatim.localStorage.getValue('dl');
-        var url = "http://translate.google.com/#auto|" + dl + "|" + info.selectionText;
-        Verbatim.openUrl(url, true);
+        var vm = Verbatim.localStorage.getValue('vm');
+
+        if (vm != 'tt') {
+            var url = "http://translate.google.com/#auto|" + dl + "|" + info.selectionText;
+            Verbatim.openUrl(url, (vm == 'ognt') ? true : false);
+        }
     },
     createContextMenu: function() {
         chrome.contextMenus.create({
