@@ -8,7 +8,7 @@
                 <div id="content">
                         <h3 id="title"></h3>
                         <form>
-                                <label for="languages">Translate for:</label>
+                                <label id="lb_translate_to" for="languages"></label>
                                 <select id="languages" tabindex="0" onchange="Verbatim.settings.save()">
                                         <option value='af'>Afrikaans</option>
                                         <option value='sq'>Albanian</option>
@@ -76,7 +76,7 @@
                                         <option value='cy'>Welsh</option>
                                         <option value='yi'>Yiddish</option>
                                 </select>
-                                <label for="view-mode">View mode:</label>
+                                <label id="lb_view-mode" for="view-mode"></label>
                                 <select id="view-mode" tabindex="1" onchange="Verbatim.settings.save()">
                                         <option value='tc'>Translate in context</option>
                                         <option value='ont'>Open new tab</option>

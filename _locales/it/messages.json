@@ -18,5 +18,13 @@
    "settings": {
       "description": "Settings label.",
       "message": "Impostazioni"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Tradurre in:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Modalità di visualizzazione:"
    }
 }

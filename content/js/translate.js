@@ -55,21 +55,26 @@ var Verbatim = {
         },
         init: function() {
             var title = chrome.i18n.getMessage('name') + ' - ' + chrome.i18n.getMessage('settings');
-            var content_title = document.querySelector('#title');
 
             document.title = title;
+
+            var content_title = document.querySelector('#title');
             content_title.innerHTML = title;
+
+            var lb_view_mode = document.querySelector('#lb_view-mode');
+            lb_view_mode.innerHTML = chrome.i18n.getMessage('view_mode');
+
+            var lb_translate_to = document.querySelector('#lb_translate_to');
+            lb_translate_to.innerHTML = chrome.i18n.getMessage('translate_to');
 
             var sl = document.querySelector('#languages');
             var dl = Verbatim.localStorage.getValue('dl');
+            if (!dl) dl = 'pt';
+            Verbatim.setSelectedValue(sl, dl);
 
             var svm = document.querySelector('#view-mode');
             var vm = Verbatim.localStorage.getValue('vm');
-
-            if (!dl) dl = 'pt';
             if (!vm) vm = 'ognt';
-
-            Verbatim.setSelectedValue(sl, dl);
             Verbatim.setSelectedValue(svm, vm);
         },
         save: function() {
