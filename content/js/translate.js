@@ -6,12 +6,13 @@ var Verbatim = {
         });
     },
     getSelectedValue: function(select) {
-        return select.options[select.selectedIndex].value
+        return select.children[select.selectedIndex].value
     },
     setSelectedValue: function(select, value) {
-        for (var i = 0; i < select.options.length; i++) {
-            if (select.options[i].value == value) {
-                select.options[i].selected = true;
+        for (var i = 0; i < select.children.length; i++) {
+            var child = select.children[i];
+            if (child.value == value) {
+                child.selected = true;
                 break;
             }
         }
