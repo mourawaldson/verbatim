@@ -43,7 +43,7 @@ var Verbatim = {
         }
     },
     settings: {
-        setDefault: function() {
+        open: function() {
             var ft = false;
 
             if (!Verbatim.localStorage.exists('ft')) {
