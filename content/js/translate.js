@@ -32,14 +32,14 @@ var Verbatim = {
         });
     },
     localStorage: {
-        save: function(name, value) {
-            localStorage[name] = value;
+        save: function(key, value) {
+            localStorage.setItem(key, value);
         },
-        getValue: function(name) {
-            return localStorage.getItem(name);
+        getValue: function(key) {
+            return localStorage.getItem(key);
         },
-        exists: function(name) {
-            return (localStorage[name]) ? true : false;
+        exists: function(key) {
+            return (localStorage[key]) ? true : false;
         }
     },
     settings: {
