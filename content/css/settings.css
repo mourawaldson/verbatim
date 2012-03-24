@@ -4,16 +4,16 @@ body {
 	color: #FFF;
 }
 
-#box {
+#content {
 	margin-top: 30px;
 	text-align: center;
 }
 
-form {
+#content form {
 	display: block;
 	margin-top: 40px;
 }
 
-label, p {
+#content label, p {
 	font-size: 13px;
 }

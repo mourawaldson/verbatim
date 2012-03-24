@@ -57,10 +57,10 @@ var Verbatim = {
         },
         init: function() {
             var title = chrome.i18n.getMessage('name') + ' - ' + chrome.i18n.getMessage('settings');
-            var h3_title = Verbatim.getElement('title');
+            var content_title = Verbatim.getElement('title');
 
             document.title = title;
-            h3_title.innerHTML = title;
+            content_title.innerHTML = title;
 
             var sl = Verbatim.getElement('languages');
             var dl = Verbatim.localStorage.getValue('dl');
