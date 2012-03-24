@@ -1,4 +1,4 @@
-var Verbatim = {
+var Core = {
     openUrl: function(url, selected) {
         chrome.tabs.create({
             "url": url,
@@ -18,19 +18,19 @@ var Verbatim = {
         }
     },
     translate: function(info) {
-        var dl = Verbatim.localStorage.getValue('dl');
-        var vm = Verbatim.localStorage.getValue('vm');
+        var dl = Core.localStorage.getValue('dl');
+        var vm = Core.localStorage.getValue('vm');
 
         if (vm != 'tt') {
             var url = "http://translate.google.com/#auto|" + dl + "|" + info.selectionText;
-            Verbatim.openUrl(url, (vm == 'ognt') ? true : false);
+            Core.openUrl(url, (vm == 'ognt') ? true : false);
         }
     },
     createContextMenu: function() {
         chrome.contextMenus.create({
             "title": chrome.i18n.getMessage('translate') + " '%s'",
             "contexts": ["selection"],
-            "onclick": Verbatim.translate
+            "onclick": Core.translate
         });
     },
     localStorage: {
@@ -48,13 +48,13 @@ var Verbatim = {
         open: function() {
             var ft = false;
 
-            if (!Verbatim.localStorage.exists('ft')) {
-                Verbatim.localStorage.save('ft', ft);
+            if (!Core.localStorage.exists('ft')) {
+                Core.localStorage.save('ft', ft);
                 ft = true;
             }
 
             if (ft) {
-                Verbatim.openUrl('./content/settings.html', true);
+                Core.openUrl('./content/settings.html', true);
             }
         },
         init: function() {
@@ -72,12 +72,12 @@ var Verbatim = {
             lb_translate_to.innerHTML = chrome.i18n.getMessage('translate_to');
 
             var sl = document.querySelector('#languages');
-            var dl = Verbatim.localStorage.getValue('dl');
+            var dl = Core.localStorage.getValue('dl');
             if (!dl) dl = 'pt';
-            Verbatim.setSelectedValue(sl, dl);
+            Core.setSelectedValue(sl, dl);
 
             var svm = document.querySelector('#view-mode');
-            var vm = Verbatim.localStorage.getValue('vm');
+            var vm = Core.localStorage.getValue('vm');
 
             var tt_value = 'tt';
             var tt_selected = (vm == tt_value) ? true : false;
@@ -92,10 +92,10 @@ var Verbatim = {
         },
         save: function() {
             var sl = document.querySelector('#languages');
-            Verbatim.localStorage.save('dl', Verbatim.getSelectedValue(sl));
+            Core.localStorage.save('dl', Core.getSelectedValue(sl));
 
             var svm = document.querySelector('#view-mode');
-            Verbatim.localStorage.save('vm', Verbatim.getSelectedValue(svm));
+            Core.localStorage.save('vm', Core.getSelectedValue(svm));
 
             var message = document.querySelector('#message');
             message.innerHTML = chrome.i18n.getMessage('automatic_save');
