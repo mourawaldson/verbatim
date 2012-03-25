@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Выделите текст и нажмите правую кнопку мыши!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Настройки сохранены."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Переводить"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Настройки"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Перевести на:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Режим просмотра:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Подсказка"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Открыть новую вкладку"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Открытие и перейти к новой вкладке"
+   }
+}

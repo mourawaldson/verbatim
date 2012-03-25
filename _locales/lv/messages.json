@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Vienkārši atlasiet tekstu un noklikšķiniet peles labo pogu!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Uzstādījumi saglabāti."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Tulkot"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Uzstādījumi"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Tulkot uz:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Pārskata režīms:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Atvērt jaunu cilni"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Atvērt un atvērtu jaunu cilni"
+   }
+}

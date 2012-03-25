@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Виділіть текст і натисніть праву кнопку миші!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Налаштування збережені."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Перекладати"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Налаштування"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Перекласти на:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Режим перегляду:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Підказка"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Відкрити нову вкладку"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Відкриття і перейти до нової вкладці"
+   }
+}

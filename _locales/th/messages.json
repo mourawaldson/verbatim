@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "เพียงแค่เลือกข้อความและคลิกเมาส์ปุ่มขวา!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "การตั้งค่าที่บันทึกไว้"
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "แปลง"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "การตั้งค่า"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "นำไปสู่​​:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "ดูโหมด:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "คำแนะนำเครื่องมือ"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "เปิดแท็บใหม่"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "เปิดแท็บใหม่และไปที่"
+   }
+}

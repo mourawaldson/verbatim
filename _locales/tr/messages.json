@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Sadece metni seçin ve farenin sağ düğmesini!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Ayarlar kaydedildi."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Çevirmek"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Ayarlar"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Çevir:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Modu için tıklayınız:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Yeni bir sekme açma"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Açın ve yeni bir sekme gitmek"
+   }
+}

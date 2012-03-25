@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Stačí vybrať text a kliknite pravým tlačidlom myši!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Uložené nastavenia."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Preložiť"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Nastavenie"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Preložiť do:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Režim zobrazenia:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Otvoriť novú záložku"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Otvoriť a prejdite na novej záložke"
+   }
+}

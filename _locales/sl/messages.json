@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Samo izberite besedilo in kliknite na desno tipko miške!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Nastavitve shranjene."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Prevajalnik"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Nastavitve"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Prevedi v:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Način prikaza:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Odpri nov zavihek"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Odpiranje in pojdite na novem zavihku"
+   }
+}

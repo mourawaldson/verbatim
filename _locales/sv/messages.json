@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Bara markera texten och klicka med höger musknapp!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Inställningar sparas."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Översätt"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Inställningarna"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Översätt till:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Visningsläge:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Öppna en ny flik"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Öppna och gå till en ny flik"
+   }
+}

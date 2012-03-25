@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Chỉ cần chọn văn bản và nhấn vào nút chuột phải!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Cài đặt đã lưu."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Dịch"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Cài đặt"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Dịch:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Chế độ xem:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Mở một tab mới"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Mở và đi đến một tab mới"
+   }
+}

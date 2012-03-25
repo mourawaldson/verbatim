@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "그냥 텍스트를 선택하고 오른쪽 마우스 버튼을 클릭!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "설정이 저장되었습니다."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "번역"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "설정"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "를 번역 :"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "모드로보기 :"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "풍선 도움말"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "새 탭 열기"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "열고 새 탭으로 이동"
+   }
+}

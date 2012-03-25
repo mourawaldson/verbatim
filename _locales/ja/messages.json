@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "単にテキストを選択し、マウスの右ボタンをクリックしてください！"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "設定が保存されます。"
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "翻訳する"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "設定"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "に変換されます："
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "モードを表示します。"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "ツールチップ"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "新しいタブを開く"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "開き、新しいタブに移動します"
+   }
+}

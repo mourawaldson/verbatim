@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Doar selectaţi textul şi faceţi clic pe butonul mouse-ului din dreapta!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Setări salvate."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Traduce"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Setări"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Traduceţi în:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Vezi Mod de:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Deschideţi o filă nouă"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Deschideţi şi du-te la o filă nouă"
+   }
+}

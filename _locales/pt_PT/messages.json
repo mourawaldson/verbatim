@@ -1,0 +1,42 @@
+{
+   "description": {
+       "description": "Extension description.",
+       "message": "Apenas selecione o texto e clique com o botão direito do mouse!"
+   },
+   "name": {
+       "description": "Extension name.",
+       "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+       "description": "Message to automatic save.",
+       "message": "Configurações salvas."
+   },
+   "translate": {
+       "description": "Right click context option.",
+       "message": "Traduzir"
+   },
+   "settings": {
+       "description": "Settings title.",
+       "message": "Configurações"
+   },
+   "translate_to": {
+       "description": "Translate to label.",
+       "message": "Traduzir para:"
+   },
+   "view_mode": {
+       "description": "View mode label.",
+       "message": "Modo de visualização:"
+   },
+   "view_mode_tt": {
+       "description": "View mode tooltip option.",
+       "message": "No contexto"
+   },
+   "view_mode_ont": {
+       "description": "View mode open a new tab option.",
+       "message": "Abrir nova aba"
+   },
+   "view_mode_ognt": {
+       "description": "View mode open and go to a new tab option.",
+      "message": "Abrir e ir para nova aba"
+   }
+}

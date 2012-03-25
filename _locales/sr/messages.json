@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Само изаберите текст и кликнете десним тастером миша!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Подешавања су сачувана."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Превести"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Подешавања"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Преведи на:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Виев моде:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Тоолтип"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Отвори нову картицу"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Отворите и идите на новој картици"
+   }
+}

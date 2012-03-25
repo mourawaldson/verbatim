@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Selecteer gewoon de tekst en klik op de rechter muisknop!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Instellingen opgeslagen."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Vertalen"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Instellingen"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Vertalen:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Bekijk modus:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Open een nieuw tabblad"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Open en ga naar een nieuw tabblad"
+   }
+}

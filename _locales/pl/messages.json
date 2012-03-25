@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Wystarczy zaznaczyć tekst i kliknij prawym przyciskiem myszy!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Ustawienia zostały zapisane."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Tłumaczyć"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Ustawienia"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Przekłada się na:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Wyświetlaj:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Otwórz nową kartę"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Otwórz i przejdź do nowej karcie"
+   }
+}

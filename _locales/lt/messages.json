@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Tiesiog pažymėkite tekstą ir spustelėkite dešinįjį pelės mygtuką!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Nustatymai išsaugoti."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "išversti"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Nustatymai"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Versti į:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Peržiūrėti režimą:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Atidaryti naują skirtuką"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Atidaryti ir pereiti į naują kortelę"
+   }
+}
