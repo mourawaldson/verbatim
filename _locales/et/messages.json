@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Lihtsalt valige tekst ja klõpsa hiire parema nupuga!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Seaded salvestatakse."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Tõlkima"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Seaded"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Tõlgi:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Vaata režiim:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Avada uue vahekaardi"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Avada ja minna uue kaardi"
+   }
+}

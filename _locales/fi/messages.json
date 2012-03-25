@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Valitse vain teksti ja klikkaa hiiren oikealla painikkeella!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Asetukset tallennetaan."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Kääntää"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Asetukset"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Käännä:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Näytä tila:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Avaa uusi välilehti"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Avaa ja siirry uuteen välilehteen"
+   }
+}

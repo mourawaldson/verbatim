@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Απλά επιλέξτε το κείμενο και πατήστε το δεξί πλήκτρο του ποντικιού!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Οι ρυθμίσεις αποθηκεύτηκαν."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Μετάφραση"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Ρυθμίσεις"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Μετάφραση σε:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Δείτε λειτουργία:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Αναδυόμενη Συμβουλή"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Ανοίξτε μια νέα καρτέλα"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Άνοιγμα και μεταβείτε σε μια νέα καρτέλα"
+   }
+}

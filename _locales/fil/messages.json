@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Piliin lamang ang mga teksto at i-click ang kanang pindutan ng mouse!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Setting-save."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Isalin"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Mga setting"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Isalin sa:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Tingnan ang mode:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Magbukas ng bagong tab"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Buksan at pumunta sa isang bagong tab"
+   }
+}

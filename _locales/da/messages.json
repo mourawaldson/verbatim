@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Du skal bare vælge teksten og klik på højre museknap!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Indstillinger gemt."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Oversæt"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Indstillinger"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Oversætte til:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Vis mode:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Åbn en ny fane"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Åbn og gå til et nyt faneblad"
+   }
+}

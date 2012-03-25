@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Wählen Sie einfach den Text und klicken Sie die rechte Maustaste!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Einstellungen gespeichert."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Übersetzen"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Einstellungen"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Übersetzen nach:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Anzeige:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Öffnen einer neuen Registerkarte"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Öffnen Sie und gehen Sie zu einem neuen Tab"
+   }
+}
