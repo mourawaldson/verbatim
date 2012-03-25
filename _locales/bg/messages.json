@@ -32,11 +32,11 @@
       "message": "Подсказка"
    },
    "view_mode_ont": {
-      "description": "View mode open new tab option.",
-      "message": "Отворете нов раздел"
+      "description": "View mode open a new tab option.",
+      "message": "Отваряне на нов раздел"
    },
    "view_mode_ognt": {
-      "description": "View mode open and go to new option.",
+      "description": "View mode open and go to a new tab option.",
       "message": "Отворете и отидете на нов таб"
    }
 }
