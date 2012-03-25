@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "ما عليك سوى اختيار النص وانقر على زر الفأرة الأيمن!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "حفظ إعدادات."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "ترجم"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "إعدادات"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "تترجم إلى:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "عرض الوضع:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "توولتيب"
+   },
+   "view_mode_ont": {
+      "description": "View mode open new tab option.",
+      "message": "فتح علامة تبويب جديدة"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to new option.",
+      "message": "فتح وانتقل إلى علامة تبويب جديدة"
+   }
+}

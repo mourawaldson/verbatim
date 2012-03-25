@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Seulement sélectionner le texte et cliquez sur le bouton droit de la souris!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Paramètres sauvegardés."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Traduire"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Paramètres"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Traduire en:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Mode de visualisation:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open new tab option.",
+      "message": "Ouvrir un nouvel onglet"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to new option.",
+      "message": "Ouvrir et aller dans un nouvel onglet"
+   }
+}
