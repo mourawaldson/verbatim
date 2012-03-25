@@ -1,7 +1,7 @@
 {
    "description": {
       "description": "Extension description.",
-      "message": "Basta selezionare il testo e fare clic sul pulsante destro del mouse!"
+      "message": "Stačí vybrat text a klikněte pravým tlačítkem myši!"
    },
    "name": {
       "description": "Extension name.",
@@ -9,23 +9,23 @@
    },
    "automatic_save": {
       "description": "Message to automatic save.",
-      "message": "Impostazioni salvate."
+      "message": "Uložené nastavení."
    },
    "translate": {
       "description": "Right click context option.",
-      "message": "Tradurre"
+      "message": "Přeložit"
    },
    "settings": {
       "description": "Settings label.",
-      "message": "Impostazioni"
+      "message": "Nastavení"
    },
    "translate_to": {
       "description": "Translate to label.",
-      "message": "Tradurre in:"
+      "message": "Přeložit do:"
    },
    "view_mode": {
       "description": "View mode label.",
-      "message": "Modalità di visualizzazione:"
+      "message": "Režim zobrazení:"
    },
    "view_mode_tt": {
       "description": "View mode tooltip option.",
@@ -33,10 +33,10 @@
    },
    "view_mode_ont": {
       "description": "View mode open a new tab option.",
-      "message": "Aprire una nuova scheda"
+      "message": "Otevřít novou záložku"
    },
    "view_mode_ognt": {
       "description": "View mode open and go to a new tab option.",
-      "message": "Aprire e andare in una nuova scheda"
+      "message": "Otevřít a přejděte na nové záložce"
    }
 }

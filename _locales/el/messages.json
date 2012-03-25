@@ -1,7 +1,7 @@
 {
    "description": {
       "description": "Extension description.",
-      "message": "Basta selezionare il testo e fare clic sul pulsante destro del mouse!"
+      "message": "Απλά επιλέξτε το κείμενο και πατήστε το δεξί πλήκτρο του ποντικιού!"
    },
    "name": {
       "description": "Extension name.",
@@ -9,34 +9,34 @@
    },
    "automatic_save": {
       "description": "Message to automatic save.",
-      "message": "Impostazioni salvate."
+      "message": "Οι ρυθμίσεις αποθηκεύτηκαν."
    },
    "translate": {
       "description": "Right click context option.",
-      "message": "Tradurre"
+      "message": "Μετάφραση"
    },
    "settings": {
       "description": "Settings label.",
-      "message": "Impostazioni"
+      "message": "Ρυθμίσεις"
    },
    "translate_to": {
       "description": "Translate to label.",
-      "message": "Tradurre in:"
+      "message": "Μετάφραση σε:"
    },
    "view_mode": {
       "description": "View mode label.",
-      "message": "Modalità di visualizzazione:"
+      "message": "Δείτε λειτουργία:"
    },
    "view_mode_tt": {
       "description": "View mode tooltip option.",
-      "message": "Tooltip"
+      "message": "Αναδυόμενη Συμβουλή"
    },
    "view_mode_ont": {
       "description": "View mode open a new tab option.",
-      "message": "Aprire una nuova scheda"
+      "message": "Ανοίξτε μια νέα καρτέλα"
    },
    "view_mode_ognt": {
       "description": "View mode open and go to a new tab option.",
-      "message": "Aprire e andare in una nuova scheda"
+      "message": "Άνοιγμα και μεταβείτε σε μια νέα καρτέλα"
    }
 }

@@ -1,7 +1,7 @@
 {
    "description": {
       "description": "Extension description.",
-      "message": "Basta selezionare il testo e fare clic sul pulsante destro del mouse!"
+      "message": "Виділіть текст і натисніть праву кнопку миші!"
    },
    "name": {
       "description": "Extension name.",
@@ -9,34 +9,34 @@
    },
    "automatic_save": {
       "description": "Message to automatic save.",
-      "message": "Impostazioni salvate."
+      "message": "Налаштування збережені."
    },
    "translate": {
       "description": "Right click context option.",
-      "message": "Tradurre"
+      "message": "Перекладати"
    },
    "settings": {
       "description": "Settings label.",
-      "message": "Impostazioni"
+      "message": "Налаштування"
    },
    "translate_to": {
       "description": "Translate to label.",
-      "message": "Tradurre in:"
+      "message": "Перекласти на:"
    },
    "view_mode": {
       "description": "View mode label.",
-      "message": "Modalità di visualizzazione:"
+      "message": "Режим перегляду:"
    },
    "view_mode_tt": {
       "description": "View mode tooltip option.",
-      "message": "Tooltip"
+      "message": "Підказка"
    },
    "view_mode_ont": {
       "description": "View mode open a new tab option.",
-      "message": "Aprire una nuova scheda"
+      "message": "Відкрити нову вкладку"
    },
    "view_mode_ognt": {
       "description": "View mode open and go to a new tab option.",
-      "message": "Aprire e andare in una nuova scheda"
+      "message": "Відкриття і перейти до нової вкладці"
    }
 }

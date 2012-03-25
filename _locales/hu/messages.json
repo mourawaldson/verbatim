@@ -1,7 +1,7 @@
 {
    "description": {
       "description": "Extension description.",
-      "message": "Basta selezionare il testo e fare clic sul pulsante destro del mouse!"
+      "message": "Csak válassza ki a szöveget, és kattintson az egér jobb gombját!"
    },
    "name": {
       "description": "Extension name.",
@@ -9,23 +9,23 @@
    },
    "automatic_save": {
       "description": "Message to automatic save.",
-      "message": "Impostazioni salvate."
+      "message": "Beállítások mentése."
    },
    "translate": {
       "description": "Right click context option.",
-      "message": "Tradurre"
+      "message": "Fordítás"
    },
    "settings": {
       "description": "Settings label.",
-      "message": "Impostazioni"
+      "message": "Beállítások"
    },
    "translate_to": {
       "description": "Translate to label.",
-      "message": "Tradurre in:"
+      "message": "Fordítás:"
    },
    "view_mode": {
       "description": "View mode label.",
-      "message": "Modalità di visualizzazione:"
+      "message": "Nézet:"
    },
    "view_mode_tt": {
       "description": "View mode tooltip option.",
@@ -33,10 +33,10 @@
    },
    "view_mode_ont": {
       "description": "View mode open a new tab option.",
-      "message": "Aprire una nuova scheda"
+      "message": "Nyisson meg egy új lapot"
    },
    "view_mode_ognt": {
       "description": "View mode open and go to a new tab option.",
-      "message": "Aprire e andare in una nuova scheda"
+      "message": "Nyissa meg és menj egy új fülön"
    }
 }

@@ -1,7 +1,7 @@
 {
    "description": {
       "description": "Extension description.",
-      "message": "Basta selezionare il testo e fare clic sul pulsante destro del mouse!"
+      "message": "只是 选择文本 然后单击鼠标右键！"
    },
    "name": {
       "description": "Extension name.",
@@ -9,34 +9,34 @@
    },
    "automatic_save": {
       "description": "Message to automatic save.",
-      "message": "Impostazioni salvate."
+      "message": "设置已保存。"
    },
    "translate": {
       "description": "Right click context option.",
-      "message": "Tradurre"
+      "message": "翻译"
    },
    "settings": {
       "description": "Settings label.",
-      "message": "Impostazioni"
+      "message": "设置"
    },
    "translate_to": {
       "description": "Translate to label.",
-      "message": "Tradurre in:"
+      "message": "翻译："
    },
    "view_mode": {
       "description": "View mode label.",
-      "message": "Modalità di visualizzazione:"
+      "message": "浏览模式："
    },
    "view_mode_tt": {
       "description": "View mode tooltip option.",
-      "message": "Tooltip"
+      "message": "工具提示"
    },
    "view_mode_ont": {
       "description": "View mode open a new tab option.",
-      "message": "Aprire una nuova scheda"
+      "message": "打开一个新标签"
    },
    "view_mode_ognt": {
       "description": "View mode open and go to a new tab option.",
-      "message": "Aprire e andare in una nuova scheda"
+      "message": "打开并进入到一个新的标签"
    }
 }
