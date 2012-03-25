@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "פשוט בחר את הטקסט ולחץ על הלחצן הימני של העכבר!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "ההגדרות נשמרו."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "לתרגם"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "הגדרות"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "תרגום:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "צפה מצב:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "תיאור כלי"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "פתח כרטיסייה חדשה"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "לפתוח פתח את הכרטיסייה החדשה"
+   }
+}

@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Csak válassza ki a szöveget, és kattintson az egér jobb gombját!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Beállítások mentése."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Fordítás"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Beállítások"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Fordítás:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Nézet:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Nyisson meg egy új lapot"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Nyissa meg és menj egy új fülön"
+   }
+}

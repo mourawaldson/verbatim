@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Cukup pilih teks dan klik tombol mouse sebelah kanan!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Pengaturan disimpan."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Menterjemahkan"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Pengaturan"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Terjemahkan ke:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Modus tampilan:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Buka tab baru"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Buka dan pergi ke tab baru"
+   }
+}
