@@ -22,7 +22,7 @@ var Core = {
         var vm = Core.localStorage.getValue('vm');
 
         if (vm != 'tt') {
-            var url = "http://translate.google.com/#auto|" + dl + "|" + info.selectionText;
+            var url = "http://translate.google.com/#auto|" + dl + "|" + encodeURI(info.selectionText);
             Core.openUrl(url, (vm == 'ognt') ? true : false);
         }
     },
