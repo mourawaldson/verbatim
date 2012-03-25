@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "只是 選擇文本 然後單擊鼠標右鍵！"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "設置已保存。"
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "翻譯"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "設置"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "翻譯："
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "瀏覽模式："
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "工具提示"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "打開一個新標籤"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "打開並進入到一個新的標籤"
+   }
+}

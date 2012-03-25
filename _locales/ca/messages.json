@@ -1,0 +1,42 @@
+{
+   "description": {
+      "description": "Extension description.",
+      "message": "Només has de seleccionar el text i feu clic al botó dret del ratolí!"
+   },
+   "name": {
+      "description": "Extension name.",
+      "message": "Verbatim Translatio"
+   },
+   "automatic_save": {
+      "description": "Message to automatic save.",
+      "message": "Configuració guardada."
+   },
+   "translate": {
+      "description": "Right click context option.",
+      "message": "Traduir"
+   },
+   "settings": {
+      "description": "Settings label.",
+      "message": "Configuració"
+   },
+   "translate_to": {
+      "description": "Translate to label.",
+      "message": "Traduir a:"
+   },
+   "view_mode": {
+      "description": "View mode label.",
+      "message": "Mode de visualització:"
+   },
+   "view_mode_tt": {
+      "description": "View mode tooltip option.",
+      "message": "Tooltip"
+   },
+   "view_mode_ont": {
+      "description": "View mode open a new tab option.",
+      "message": "Obrir una nova pestanya"
+   },
+   "view_mode_ognt": {
+      "description": "View mode open and go to a new tab option.",
+      "message": "Obrir i vagi a una nova pestanya"
+   }
+}
