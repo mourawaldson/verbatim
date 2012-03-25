@@ -32,11 +32,11 @@
       "message": "توولتيب"
    },
    "view_mode_ont": {
-      "description": "View mode open new tab option.",
+      "description": "View mode open a new tab option.",
       "message": "فتح علامة تبويب جديدة"
    },
    "view_mode_ognt": {
-      "description": "View mode open and go to new option.",
+      "description": "View mode open and go to a new tab option.",
       "message": "فتح وانتقل إلى علامة تبويب جديدة"
    }
 }

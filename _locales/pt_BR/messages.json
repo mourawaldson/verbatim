@@ -32,11 +32,11 @@
        "message": "No contexto"
    },
    "view_mode_ont": {
-       "description": "View mode open new tab option.",
+       "description": "View mode open a new tab option.",
        "message": "Abrir nova aba"
    },
    "view_mode_ognt": {
-       "description": "View mode open and go to new option.",
+       "description": "View mode open and go to a new tab option.",
       "message": "Abrir e ir para nova aba"
    }
 }
