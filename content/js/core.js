@@ -6,7 +6,7 @@ var Core = {
         });
     },
     getSelectedValue: function(select) {
-        return select.children[select.selectedIndex].value
+        return select.children[select.selectedIndex].value;
     },
     setSelectedValue: function(select, value) {
         for (var i = 0; i < select.children.length; i++) {
