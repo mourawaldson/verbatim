@@ -57,7 +57,47 @@ var Core = {
                 Core.openUrl('./content/settings.html', true);
             }
         },
+        supportedLanguage: function(code) {
+            var SUPPORTED_LOCALES = ['af', 'ar', 'az', 'be', 'bg', 'bn', 'ca', 'cs', 'cy', 'da', 'de', 'el', 'en', 'en-GB', 'es', 'et', 'eu', 'fa', 'fi', 'fil', 'fr', 'ga', 'gl', 'gu', 'hi', 'hr', 'ht', 'hu', 'hy', 'id', 'is', 'it', 'iw', 'ja', 'ka', 'kn', 'ko', 'lt', 'lv', 'mk', 'ms', 'mt', 'nl', 'no', 'pl', 'pt-BR', 'pt-PT', 'ro', 'ru', 'sk', 'sl', 'sq', 'sr', 'sv', 'sw', 'ta', 'te', 'th', 'tl', 'tr', 'uk', 'ur', 'vi', 'yi', 'zh-CN', 'zh-TW'];
+
+            return SUPPORTED_LOCALES.indexOf(code) != -1;
+        },
+        normalizeLangcode: function(code) {
+            if (code.toLowerCase() == 'zh-tw') return 'zh-TW';
+            if (code.toLowerCase() == 'zh-cn') return 'zh-CN';
+            if (code.toLowerCase() == 'pt-pt') return 'pt-PT';
+            if (code.toLowerCase() == 'pt-br') return 'pt-BR';
+            if (code.length >= 2 && Core.settings.supportedLanguage(code)) return code.substr(0, 2);
+            else return 'en';
+        },
+        loadSupportedLanguages: function() {
+            var displayLang = Core.settings.normalizeLangcode(window.navigator.language);
+
+            var s = document.createElement('script');
+            s.src = 'http://translate.google.com/translate_a/l?client=es' + '&cb=Core.settings.supportedLanguagesCallback&hl=' + displayLang;
+            document.querySelector('head').appendChild(s);
+        },
+        supportedLanguagesCallback: function(langs) {
+            var selector = document.querySelector('#languages');
+
+            if ('tl' in langs) {
+                selector.innerHTML = '';
+
+                for (var langCode in langs['tl']) {
+                    var newOption = document.createElement('option');
+                    newOption.value = langCode;
+                    newOption.textContent = langs['tl'][langCode];
+                    selector.appendChild(newOption);
+                }
+
+                var lang = localStorage['dl'];
+                if (!lang) lang = normalizeLangcode(window.navigator.language);
+                Core.setSelectedValue(selector, lang);
+            }
+        },
         init: function() {
+            //Core.settings.loadSupportedLanguages();
+
             var title = chrome.i18n.getMessage('name') + ' - ' + chrome.i18n.getMessage('settings');
 
             document.title = title;
@@ -73,7 +113,7 @@ var Core = {
 
             var sl = document.querySelector('#languages');
             var dl = Core.localStorage.getValue('dl');
-            if (!dl) dl = 'pt';
+            if (!dl) dl = Core.settings.normalizeLangcode(window.navigator.language);
             Core.setSelectedValue(sl, dl);
 
             var svm = document.querySelector('#view-mode');
