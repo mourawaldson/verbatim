@@ -90,8 +90,8 @@ var Core = {
                     selector.appendChild(newOption);
                 }
 
-                var lang = localStorage['dl'];
-                if (!lang) lang = normalizeLangcode(window.navigator.language);
+                var lang = Core.localStorage.getValue('dl');
+                if (!lang) lang = Core.settings.normalizeLangcode(window.navigator.language);
                 Core.setSelectedValue(selector, lang);
             }
         },
