@@ -94,9 +94,20 @@ var Core = {
                 if (!lang) lang = Core.settings.normalizeLangcode(window.navigator.language);
                 Core.setSelectedValue(selector, lang);
             }
+
+            var selects = document.getElementsByTagName('select');
+            var labels = document.getElementsByTagName('label');
+
+            for (var i = 0; i < selects.length; i++) {
+                selects[i].style.visibility = 'visible';
+            }
+
+            for (var i = 0; i < labels.length; i++) {
+                labels[i].style.visibility = 'visible';
+            }
         },
         init: function() {
-            //Core.settings.loadSupportedLanguages();
+            Core.settings.loadSupportedLanguages();
 
             var title = chrome.i18n.getMessage('name') + ' - ' + chrome.i18n.getMessage('settings');
 

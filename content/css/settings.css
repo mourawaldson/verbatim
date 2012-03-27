@@ -17,3 +17,7 @@ body {
 #content label, p {
 	font-size: 13px;
 }
+
+select, label {
+    visibility: hidden;
+}
