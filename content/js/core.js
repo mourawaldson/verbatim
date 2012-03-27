@@ -17,6 +17,18 @@ var Core = {
             }
         }
     },
+    showElements: function() {
+        var selects = document.getElementsByTagName('select');
+        var labels = document.getElementsByTagName('label');
+
+        for (var i = 0; i < selects.length; i++) {
+            selects[i].style.visibility = 'visible';
+        }
+
+        for (var i = 0; i < labels.length; i++) {
+            labels[i].style.visibility = 'visible';
+        }
+    },
     translate: function(info) {
         var dl = Core.localStorage.getValue('dl');
         var vm = Core.localStorage.getValue('vm');
@@ -95,16 +107,7 @@ var Core = {
                 Core.setSelectedValue(selector, lang);
             }
 
-            var selects = document.getElementsByTagName('select');
-            var labels = document.getElementsByTagName('label');
-
-            for (var i = 0; i < selects.length; i++) {
-                selects[i].style.visibility = 'visible';
-            }
-
-            for (var i = 0; i < labels.length; i++) {
-                labels[i].style.visibility = 'visible';
-            }
+            Core.showElements();
         },
         init: function() {
             Core.settings.loadSupportedLanguages();
