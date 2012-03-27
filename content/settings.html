@@ -3,7 +3,6 @@
         <head>
             <title></title>
             <link rel="stylesheet" type="text/css" href="css/settings.css" />
-            <script src="js/core.js"></script>
             <meta charset="utf-8">
         </head>
         <body onload="Core.settings.init()">
@@ -11,7 +10,7 @@
                         <h3 id="title"></h3>
                         <form>
                                 <label id="lb_translate_to" for="languages"></label>
-                                <select id="languages" tabindex="0" onchange="Core.settings.save()">
+                                <select id="languages" tabindex="0" onchange="Core.settings.save(); trackLanguage(this.value);">
                                         <option value='af'>Afrikaans</option>
                                         <option value='sq'>Albanian - shqipe</option>
                                         <option value='ar'>Arabic - ‎‫العربية‬‎</option>
@@ -79,9 +78,11 @@
                                         <option value='yi'>Yiddish - יידיש</option>
                                 </select>
                                 <label id="lb_view-mode" for="view-mode"></label>
-                                <select id="view-mode" tabindex="1" onchange="Core.settings.save()"></select>
+                                <select id="view-mode" tabindex="1" onchange="Core.settings.save(); trackViewMode(this.value);"></select>
                                 <p id="message"></p>
                         </form>
                 </div>
+                <script src="js/core.js"></script>
+                <script src="js/analytics.js"></script>
         </body>
 </html>
