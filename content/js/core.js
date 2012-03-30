@@ -70,20 +70,18 @@ var Core = {
             }
         },
         supportedLanguage: function(code) {
-            var SUPPORTED_LOCALES = ['af', 'ar', 'az', 'be', 'bg', 'bn', 'ca', 'cs', 'cy', 'da', 'de', 'el', 'en', 'en-GB', 'es', 'et', 'eu', 'fa', 'fi', 'fil', 'fr', 'ga', 'gl', 'gu', 'hi', 'hr', 'ht', 'hu', 'hy', 'id', 'is', 'it', 'iw', 'ja', 'ka', 'kn', 'ko', 'lt', 'lv', 'mk', 'ms', 'mt', 'nl', 'no', 'pl', 'pt-BR', 'pt-PT', 'ro', 'ru', 'sk', 'sl', 'sq', 'sr', 'sv', 'sw', 'ta', 'te', 'th', 'tl', 'tr', 'uk', 'ur', 'vi', 'yi', 'zh-CN', 'zh-TW'];
+            var SUPPORTED_LOCALES = ['ar', 'bg', 'ca', 'cs', 'da', 'de', 'el', 'en', 'en-GB', 'en-US', 'es', 'es-419', 'et', 'fi', 'fil', 'fr', 'he', 'hi', 'hr', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nl', 'no', 'pl', 'pt-BR', 'pt-PT', 'ro', 'ru', 'sk', 'sl', 'sr', 'sv', 'th', 'tl', 'tr', 'uk', 'vi', 'zh-CN', 'zh-TW'];
 
             return SUPPORTED_LOCALES.indexOf(code) != -1;
         },
-        normalizeLangcode: function(code) {
+        normalizeLanguageCode: function(code) {
             if (code.toLowerCase() == 'zh-tw') return 'zh-TW';
             if (code.toLowerCase() == 'zh-cn') return 'zh-CN';
-            if (code.toLowerCase() == 'pt-pt') return 'pt-PT';
-            if (code.toLowerCase() == 'pt-br') return 'pt-BR';
             if (code.length >= 2 && Core.settings.supportedLanguage(code)) return code.substr(0, 2);
             else return 'en';
         },
         loadSupportedLanguages: function() {
-            var displayLang = Core.settings.normalizeLangcode(window.navigator.language);
+            var displayLang = Core.settings.normalizeLanguageCode(window.navigator.language);
 
             var s = document.createElement('script');
             s.src = 'http://translate.google.com/translate_a/l?client=es' + '&cb=Core.settings.supportedLanguagesCallback&hl=' + displayLang;
@@ -103,7 +101,7 @@ var Core = {
                 }
 
                 var lang = Core.localStorage.getValue('dl');
-                if (!lang) lang = Core.settings.normalizeLangcode(window.navigator.language);
+                if (!lang) lang = Core.settings.normalizeLanguageCode(window.navigator.language);
                 Core.setSelectedValue(selector, lang);
             }
 
