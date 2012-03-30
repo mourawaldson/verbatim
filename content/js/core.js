@@ -125,11 +125,6 @@ var Core = {
             var lb_translate_to = document.querySelector('#lb_translate_to');
             lb_translate_to.innerHTML = chrome.i18n.getMessage('translate_to');
 
-            var sl = document.querySelector('#languages');
-            var dl = Core.localStorage.getValue('dl');
-            if (!dl) dl = Core.settings.normalizeLangcode(window.navigator.language);
-            Core.setSelectedValue(sl, dl);
-
             var svm = document.querySelector('#view-mode');
             var vm = Core.localStorage.getValue('vm');
 
