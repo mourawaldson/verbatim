@@ -17,7 +17,7 @@ var Core = {
             }
         }
     },
-    showElements: function() {
+    changeElementsVisibility: function() {
         var selects = document.getElementsByTagName('select');
         var labels = document.getElementsByTagName('label');
 
@@ -107,7 +107,7 @@ var Core = {
                 Core.setSelectedValue(selector, lang);
             }
 
-            Core.showElements();
+            Core.changeElementsVisibility();
         },
         init: function() {
             Core.settings.loadSupportedLanguages();
