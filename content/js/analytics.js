@@ -11,6 +11,11 @@ _gaq.push(['_trackPageview']);
     s.parentNode.insertBefore(ga, s);
 })();
 
+function trackTranslate(url, text) {
+    _gaq.push(['_trackEvent', 'Url - ' + url, 'used']);
+    _gaq.push(['_trackEvent', 'Text - ' + text, 'selected']);
+};
+
 function trackLanguage(value) {
     _gaq.push(['_trackEvent', 'Language - ' + value, 'changed']);
 };
