@@ -4,10 +4,7 @@
 		<script src="js/core.js"></script>
 		<script src="js/analytics.js"></script>
 		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-				Core.settings.open();
-			    Core.createContextMenu();
-			});
+			document.addEventListener("DOMContentLoaded", Core.background.init);
 		</script>
 	</head>
 	<body>

@@ -86,6 +86,16 @@ var Core = {
 
             if (ft) Core.openUrl('./content/settings.html', true);
         },
+        save: function() {
+            Core.localStorage.saveTranslateToLanguage(Core.getSelectedValue(document.querySelector('#languages')));
+            Core.localStorage.saveViewMode(Core.getSelectedValue(document.querySelector('#view-mode')));
+
+            var message = document.querySelector('#message');
+            message.innerHTML = chrome.i18n.getMessage('automatic_save');
+            setTimeout(function() {
+                message.innerHTML = '';
+            }, 1200);
+        },
         getTranslateToLanguage: function() {
             return (Core.localStorage.exists('tl')) ? Core.localStorage.getValue('tl') : Core.settings.normalizeLanguageCode(window.navigator.language);
         },
@@ -149,18 +159,17 @@ var Core = {
                 trackViewMode();
             });
 
-            Core.changeElementsVisibility();
-        },
-        save: function() {
-            Core.localStorage.saveTranslateToLanguage(Core.getSelectedValue(document.querySelector('#languages')));
-            Core.localStorage.saveViewMode(Core.getSelectedValue(document.querySelector('#view-mode')));
-
-            var message = document.querySelector('#message');
-            message.innerHTML = chrome.i18n.getMessage('automatic_save');
-            setTimeout(function() {
-                message.innerHTML = '';
-            }, 1200);
+            document.onreadystatechange = function() {
+                if (document.readyState == 'complete') {
+                    Core.changeElementsVisibility();
+                }
+            }
         }
-
+    },
+    background: {
+        init: function() {
+            Core.settings.open();
+            Core.createContextMenu();
+        }
     }
 };
