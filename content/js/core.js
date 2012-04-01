@@ -1,4 +1,11 @@
 var Core = {
+    createContextMenu: function() {
+        chrome.contextMenus.create({
+            "title": chrome.i18n.getMessage('translate') + " '%s'",
+            "contexts": ["selection"],
+            "onclick": Core.translate
+        });
+    },
     openUrl: function(url, selected) {
         chrome.tabs.create({
             "url": url,
@@ -37,13 +44,6 @@ var Core = {
             var url = "http://translate.google.com/#auto|" + dl + "|" + encodeURI(info.selectionText);
             Core.openUrl(url, (vm == 'ognt') ? true : false);
         }
-    },
-    createContextMenu: function() {
-        chrome.contextMenus.create({
-            "title": chrome.i18n.getMessage('translate') + " '%s'",
-            "contexts": ["selection"],
-            "onclick": Core.translate
-        });
     },
     localStorage: {
         save: function(key, value) {
