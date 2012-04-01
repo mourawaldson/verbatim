@@ -9,7 +9,7 @@
     "icons": {
         "16": "content/images/verbatim-16x16.png",
         "48": "content/images/verbatim-48x48.png",
-        "128": "content/images/verbatim-128x128-app.png"
+        "128": "content/images/verbatim-128x128.png"
     },
     "minimum_chrome_version": "6.0.0.0"
 }

@@ -1,4 +1,11 @@
 var Core = {
+    createContextMenu: function() {
+        chrome.contextMenus.create({
+            "title": chrome.i18n.getMessage('translate') + " '%s'",
+            "contexts": ["selection"],
+            "onclick": Core.translate
+        });
+    },
     openUrl: function(url, selected) {
         chrome.tabs.create({
             "url": url,
@@ -7,6 +14,9 @@ var Core = {
     },
     getSelectedValue: function(select) {
         return select.children[select.selectedIndex].value;
+    },
+    getSelectedTextContent: function(select) {
+        return select.children[select.selectedIndex].textContent;
     },
     setSelectedValue: function(select, value) {
         for (var i = 0; i < select.children.length; i++) {
@@ -17,23 +27,44 @@ var Core = {
             }
         }
     },
+    populateSelect: function(select, options) {
+        for (var value in options) {
+            var option = document.createElement('option');
+            option.value = value;
+            option.textContent = options[value];
+            select.appendChild(option);
+        }
+
+        return select;
+    },
+    changeElementsVisibility: function() {
+        var selects = document.getElementsByTagName('select');
+        var labels = document.getElementsByTagName('label');
+
+        for (var i = 0; i < selects.length; i++) {
+            selects[i].style.visibility = 'visible';
+        }
+
+        for (var i = 0; i < labels.length; i++) {
+            labels[i].style.visibility = 'visible';
+        }
+    },
     translate: function(info) {
-        var dl = Core.localStorage.getValue('dl');
-        var vm = Core.localStorage.getValue('vm');
+        var vm = Core.settings.getViewMode();
+        var from = (info.selectionText.toLowerCase() != chrome.i18n.getMessage('name').toLowerCase()) ? 'auto' : 'la';
 
         if (vm != 'tt') {
-            var url = "http://translate.google.com/#auto|" + dl + "|" + encodeURI(info.selectionText);
+            var url = "http://translate.google.com/#" + from + "|" + Core.settings.getTranslateToLanguage() + "|" + encodeURI(info.selectionText);
             Core.openUrl(url, (vm == 'ognt') ? true : false);
         }
     },
-    createContextMenu: function() {
-        chrome.contextMenus.create({
-            "title": chrome.i18n.getMessage('translate') + " '%s'",
-            "contexts": ["selection"],
-            "onclick": Core.translate
-        });
-    },
     localStorage: {
+        saveTranslateToLanguage: function(value) {
+            Core.localStorage.save('tl', value);
+        },
+        saveViewMode: function(value) {
+            Core.localStorage.save('vm', value);
+        },
         save: function(key, value) {
             localStorage.setItem(key, value);
         },
@@ -53,57 +84,73 @@ var Core = {
                 ft = true;
             }
 
-            if (ft) {
-                Core.openUrl('./content/settings.html', true);
+            if (ft) Core.openUrl('./content/settings.html', true);
+        },
+        getTranslateToLanguage: function() {
+            return (Core.localStorage.exists('tl')) ? Core.localStorage.getValue('tl') : Core.settings.normalizeLanguageCode(window.navigator.language);
+        },
+        getViewMode: function() {
+            return (Core.localStorage.exists('vm')) ? Core.localStorage.getValue('vm') : 'ognt';
+        },
+        supportedLocale: function(code) {
+            var supported_locales = ['ar', 'bg', 'ca', 'cs', 'da', 'de', 'el', 'en', 'en-GB', 'en-US', 'es', 'es-419', 'et', 'fi', 'fil', 'fr', 'he', 'hi', 'hr', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nl', 'no', 'pl', 'pt-BR', 'pt-PT', 'ro', 'ru', 'sk', 'sl', 'sr', 'sv', 'th', 'tl', 'tr', 'uk', 'vi', 'zh-CN', 'zh-TW'];
+
+            return supported_locales.indexOf(code) != -1;
+        },
+        normalizeLanguageCode: function(code) {
+            if (code.toLowerCase() == 'zh-tw') return 'zh-TW';
+            if (code.toLowerCase() == 'zh-cn') return 'zh-CN';
+            if (code.length >= 2 && Core.settings.supportedLocale(code)) return code.substr(0, 2);
+            else return 'en';
+        },
+        loadSupportedLanguages: function() {
+            var script = document.createElement('script');
+            script.src = 'http://translate.google.com/translate_a/l?client=es' + '&cb=Core.settings.supportedLanguagesCallback&hl=' + Core.settings.normalizeLanguageCode(window.navigator.language);
+            document.querySelector('head').appendChild(script);
+        },
+        supportedLanguagesCallback: function(langs) {
+            var sl = document.querySelector('#languages');
+
+            if ('tl' in langs) {
+                sl.innerHTML = '';
+                Core.populateSelect(sl, langs['tl']);
+                Core.setSelectedValue(sl, Core.settings.getTranslateToLanguage());
             }
         },
+        loadSupportedViewModes: function() {
+            var svm = document.querySelector('#view-mode');
+            var options = {
+                'tt': chrome.i18n.getMessage('view_mode_tt'),
+                'ont': chrome.i18n.getMessage('view_mode_ont'),
+                'ognt': chrome.i18n.getMessage('view_mode_ognt')
+            };
+
+            Core.populateSelect(svm, options);
+            Core.setSelectedValue(svm, Core.settings.getViewMode());
+        },
         init: function() {
+            Core.settings.loadSupportedLanguages();
+            Core.settings.loadSupportedViewModes();
+
             var title = chrome.i18n.getMessage('name') + ' - ' + chrome.i18n.getMessage('settings');
 
             document.title = title;
+            document.querySelector('#title').innerHTML = title;
+            document.querySelector('#lb_translate_to').innerHTML = chrome.i18n.getMessage('translate_to');
+            document.querySelector('#lb_view-mode').innerHTML = chrome.i18n.getMessage('view_mode');
 
-            var content_title = document.querySelector('#title');
-            content_title.innerHTML = title;
-
-            var lb_view_mode = document.querySelector('#lb_view-mode');
-            lb_view_mode.innerHTML = chrome.i18n.getMessage('view_mode');
-
-            var lb_translate_to = document.querySelector('#lb_translate_to');
-            lb_translate_to.innerHTML = chrome.i18n.getMessage('translate_to');
-
-            var sl = document.querySelector('#languages');
-            var dl = Core.localStorage.getValue('dl');
-            if (!dl) dl = 'pt';
-            Core.setSelectedValue(sl, dl);
-
-            var svm = document.querySelector('#view-mode');
-            var vm = Core.localStorage.getValue('vm');
-
-            var tt_value = 'tt';
-            var tt_selected = (vm == tt_value) ? true : false;
-            var ont_value = 'ont';
-            var ont_selected = (vm == ont_value) ? true : false;
-            var ognt_value = 'ognt';
-            var ognt_selected = (vm == ognt_value || !vm) ? true : false;
-
-            svm.options[0] = new Option(chrome.i18n.getMessage('view_mode_tt'), tt_value, false, tt_selected);
-            svm.options[1] = new Option(chrome.i18n.getMessage('view_mode_ont'), ont_value, false, ont_selected);
-            svm.options[2] = new Option(chrome.i18n.getMessage('view_mode_ognt'), ognt_value, false, ognt_selected);
+            Core.changeElementsVisibility();
         },
         save: function() {
-            var sl = document.querySelector('#languages');
-            Core.localStorage.save('dl', Core.getSelectedValue(sl));
-
-            var svm = document.querySelector('#view-mode');
-            Core.localStorage.save('vm', Core.getSelectedValue(svm));
+            Core.localStorage.saveTranslateToLanguage(Core.getSelectedValue(document.querySelector('#languages')));
+            Core.localStorage.saveViewMode(Core.getSelectedValue(document.querySelector('#view-mode')));
 
             var message = document.querySelector('#message');
             message.innerHTML = chrome.i18n.getMessage('automatic_save');
-
             setTimeout(function() {
                 message.innerHTML = '';
             }, 1200);
         }
 
     }
-}
+};
