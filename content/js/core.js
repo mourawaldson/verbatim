@@ -37,8 +37,6 @@ var Core = {
             var url = "http://translate.google.com/#auto|" + dl + "|" + encodeURI(info.selectionText);
             Core.openUrl(url, (vm == 'ognt') ? true : false);
         }
-
-        trackTranslate(info.pageUrl, info.selectionText);
     },
     createContextMenu: function() {
         chrome.contextMenus.create({
