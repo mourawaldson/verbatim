@@ -65,19 +65,17 @@ var Core = {
                 ft = true;
             }
 
-            if (ft) {
-                Core.openUrl('./content/settings.html', true);
-            }
+            if (ft) Core.openUrl('./content/settings.html', true);
         },
-        supportedLanguage: function(code) {
-            var SUPPORTED_LOCALES = ['ar', 'bg', 'ca', 'cs', 'da', 'de', 'el', 'en', 'en-GB', 'en-US', 'es', 'es-419', 'et', 'fi', 'fil', 'fr', 'he', 'hi', 'hr', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nl', 'no', 'pl', 'pt-BR', 'pt-PT', 'ro', 'ru', 'sk', 'sl', 'sr', 'sv', 'th', 'tl', 'tr', 'uk', 'vi', 'zh-CN', 'zh-TW'];
+        supportedLocale: function(code) {
+            var supported_locales = ['ar', 'bg', 'ca', 'cs', 'da', 'de', 'el', 'en', 'en-GB', 'en-US', 'es', 'es-419', 'et', 'fi', 'fil', 'fr', 'he', 'hi', 'hr', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nl', 'no', 'pl', 'pt-BR', 'pt-PT', 'ro', 'ru', 'sk', 'sl', 'sr', 'sv', 'th', 'tl', 'tr', 'uk', 'vi', 'zh-CN', 'zh-TW'];
 
-            return SUPPORTED_LOCALES.indexOf(code) != -1;
+            return supported_locales.indexOf(code) != -1;
         },
         normalizeLanguageCode: function(code) {
             if (code.toLowerCase() == 'zh-tw') return 'zh-TW';
             if (code.toLowerCase() == 'zh-cn') return 'zh-CN';
-            if (code.length >= 2 && Core.settings.supportedLanguage(code)) return code.substr(0, 2);
+            if (code.length >= 2 && Core.settings.supportedLocale(code)) return code.substr(0, 2);
             else return 'en';
         },
         loadSupportedLanguages: function() {
