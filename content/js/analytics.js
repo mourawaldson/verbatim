@@ -11,20 +11,10 @@ _gaq.push(['_trackPageview']);
     s.parentNode.insertBefore(ga, s);
 })();
 
-function trackLanguage(value) {
-    _gaq.push(['_trackEvent', 'Language - ' + value, 'changed']);
+function trackLanguage() {
+    _gaq.push(['_trackEvent', 'Language: ' + Core.getSelectedValue(document.querySelector('#languages')), 'changed']);
 };
 
 function trackViewMode(value) {
-    if (value == 'tt') {
-        value = 'Tooltip';
-    }
-    else if (value == 'ont') {
-        value = 'Open a new tab';
-    }
-    else if (value == 'ognt') {
-        value = 'Open and go to a new tab';
-    }
-
-    _gaq.push(['_trackEvent', 'View Mode - ' + value, 'changed']);
+    _gaq.push(['_trackEvent', 'View Mode: ' + Core.getSelectedTextContent(document.querySelector('#view-mode')), 'changed']);
 };

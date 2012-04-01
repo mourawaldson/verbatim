@@ -10,7 +10,7 @@
                         <h3 id="title"></h3>
                         <form>
                                 <label id="lb_translate_to" for="languages"></label>
-                                <select id="languages" tabindex="1" onchange="Core.settings.save(); trackLanguage(this.value);">
+                                <select id="languages" tabindex="1" onchange="Core.settings.save(); trackLanguage();">
                                         <option value='af'>Afrikaans</option>
                                         <option value='sq'>Albanian - shqipe</option>
                                         <option value='ar'>Arabic - ‎‫العربية‬‎</option>
@@ -78,7 +78,8 @@
                                         <option value='yi'>Yiddish - יידיש</option>
                                 </select>
                                 <label id="lb_view-mode" for="view-mode"></label>
-                                <select id="view-mode" tabindex="2" onchange="Core.settings.save(); trackViewMode(this.value);"></select>
+                                <select id="view-mode" tabindex="2" onchange="Core.settings.save(); trackViewMode();">
+                                </select>
                                 <p id="message"></p>
                         </form>
                 </div>
