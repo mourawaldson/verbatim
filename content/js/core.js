@@ -139,6 +139,16 @@ var Core = {
             document.querySelector('#lb_translate_to').innerHTML = chrome.i18n.getMessage('translate_to');
             document.querySelector('#lb_view-mode').innerHTML = chrome.i18n.getMessage('view_mode');
 
+            document.querySelector('#languages').addEventListener('change', function() {
+                Core.settings.save();
+                trackLanguage();
+            });
+
+            document.querySelector('#view-mode').addEventListener('change', function() {
+                Core.settings.save();
+                trackViewMode();
+            });
+
             Core.changeElementsVisibility();
         },
         save: function() {
