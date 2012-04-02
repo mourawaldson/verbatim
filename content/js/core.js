@@ -130,7 +130,7 @@ var Core = {
         loadSupportedViewModes: function() {
             var svm = document.querySelector('#view-mode');
             var options = {
-                'tt': chrome.i18n.getMessage('view_mode_tt'),
+                //'tt': chrome.i18n.getMessage('view_mode_tt'),
                 'ont': chrome.i18n.getMessage('view_mode_ont'),
                 'ognt': chrome.i18n.getMessage('view_mode_ognt')
             };
