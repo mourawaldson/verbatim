@@ -1,89 +1,91 @@
 <!DOCTYPE html>
 <html>
-        <head>
-            <title></title>
-            <link rel="stylesheet" type="text/css" href="css/settings.css" />
-            <meta charset="utf-8">
-        </head>
-        <body onload="Core.settings.init()">
-                <div id="content">
-                        <h3 id="title"></h3>
-                        <form>
-                                <label id="lb_translate_to" for="languages"></label>
-                                <select id="languages" tabindex="1" onchange="Core.settings.save(); trackLanguage();">
-                                        <option value='af'>Afrikaans</option>
-                                        <option value='sq'>Albanian - shqipe</option>
-                                        <option value='ar'>Arabic - ‎‫العربية‬‎</option>
-                                        <option value='hy'>Armenian - Հայերէն</option>
-                                        <option value='az'>Azerbaijani - azərbaycanca</option>
-                                        <option value='eu'>Basque - euskara</option>
-                                        <option value='be'>Belarusian - беларуская</option>
-                                        <option value='bn'>Bengali - বাংলা</option>
-                                        <option value='bg'>Bulgarian - български</option>
-                                        <option value='ca'>Catalan - català</option>
-                                        <option value='zh-CN'>Chinese (Simplified Han) - 中文（简体中文）</option>
-                                        <option value='zh-TW'>Chinese (Traditional Han) - 中文 (繁體中文)</option>
-                                        <option value='hr'>Croatian - hrvatski</option>
-                                        <option value='cs'>Czech - čeština</option>
-                                        <option value='da'>Danish - dansk</option>
-                                        <option value='nl'>Dutch - Nederlands</option>
-                                        <option value='en'>English</option>
-                                        <option value='eo'>Esperanto - esperanto</option>
-                                        <option value='et'>Estonian - eesti</option>
-                                        <option value='tl'>Filipino</option>
-                                        <option value='fi'>Finnish - suomi</option>
-                                        <option value='fr'>French - français</option>
-                                        <option value='gl'>Galician - galego</option>
-                                        <option value='ka'>Georgian - ქართული</option>
-                                        <option value='de'>German - Deutsch</option>
-                                        <option value='el'>Greek - Ελληνικά</option>
-                                        <option value='gu'>Gujarati - ગુજરાતી</option>
-                                        <option value='ht'>Haitian Creole - kreyòl ayisyen</option>
-                                        <option value='iw'>Hebrew - ‎‫עברית‬‎</option>
-                                        <option value='hi'>Hindi - हिन्दी</option>
-                                        <option value='hu'>Hungarian - magyar</option>
-                                        <option value='is'>Icelandic - íslenska</option>
-                                        <option value='id'>Indonesian - Bahasa Indonesia</option>
-                                        <option value='ga'>Irish - Gaeilge</option>
-                                        <option value='it'>Italian - italiano</option>
-                                        <option value='ja'>Japanese - 日本語</option>
-                                        <option value='kn'>Kannada - ಕನ್ನಡ</option>
-                                        <option value='ko'>Korean - 한국어</option>
-                                        <option value='la'>Latin - Lingua Latina</option>
-                                        <option value='lv'>Latvian - latviešu</option>
-                                        <option value='lt'>Lithuanian - lietuvių</option>
-                                        <option value='mk'>Macedonian - македонски</option>
-                                        <option value='ms'>Malay - Bahasa Melayu</option>
-                                        <option value='mt'>Maltese - Malti</option>
-                                        <option value='no'>Norwegian - norsk</option>
-                                        <option value='fa'>Persian - ‎‫فارسی‬‎</option>
-                                        <option value='pl'>Polish - polski</option>
-                                        <option value='pt'>Portuguese - português</option>
-                                        <option value='ro'>Romanian - română</option>
-                                        <option value='ru'>Russian - русский</option>
-                                        <option value='sr'>Serbian - Српски</option>
-                                        <option value='sk'>Slovak - slovenčina</option>
-                                        <option value='sl'>Slovenian - slovenščina</option>
-                                        <option value='es'>Spanish - español</option>
-                                        <option value='sw'>Swahili - Kiswahili</option>
-                                        <option value='sv'>Swedish - svenska</option>
-                                        <option value='ta'>Tamil - தமிழ்</option>
-                                        <option value='te'>Telugu - తెలుగు</option>
-                                        <option value='th'>Thai - ไทย</option>
-                                        <option value='tr'>Turkish - Türkçe</option>
-                                        <option value='uk'>Ukrainian - українська</option>
-                                        <option value='ur'>Urdu - ‎‫اردو‬‎</option>
-                                        <option value='vi'>Vietnamese - Tiếng Việt</option>
-                                        <option value='cy'>Welsh - Cymraeg</option>
-                                        <option value='yi'>Yiddish - יידיש</option>
-                                </select>
-                                <label id="lb_view-mode" for="view-mode"></label>
-                                <select id="view-mode" tabindex="2" onchange="Core.settings.save(); trackViewMode();">
-                                </select>
-                                <p id="message"></p>
-                        </form>
-                </div>
-                <script src="js/core.js"></script>
-                <script src="js/analytics.js"></script>
-        </body>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="css/settings.css" />
+        <script src="js/core.min.js"></script>
+        <script src="js/analytics.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", Core.settings.init);
+        </script>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="content">
+            <h3 id="title"></h3>
+            <form>
+                <label id="lb_translate_to" for="languages"></label>
+                <select id="languages" tabindex="1">
+                    <option value='af'>Afrikaans</option>
+                    <option value='sq'>Albanian - shqipe</option>
+                    <option value='ar'>Arabic - ‎‫العربية‬‎</option>
+                    <option value='hy'>Armenian - Հայերէն</option>
+                    <option value='az'>Azerbaijani - azərbaycanca</option>
+                    <option value='eu'>Basque - euskara</option>
+                    <option value='be'>Belarusian - беларуская</option>
+                    <option value='bn'>Bengali - বাংলা</option>
+                    <option value='bg'>Bulgarian - български</option>
+                    <option value='ca'>Catalan - català</option>
+                    <option value='zh-CN'>Chinese (Simplified Han) - 中文（简体中文）</option>
+                    <option value='zh-TW'>Chinese (Traditional Han) - 中文 (繁體中文)</option>
+                    <option value='hr'>Croatian - hrvatski</option>
+                    <option value='cs'>Czech - čeština</option>
+                    <option value='da'>Danish - dansk</option>
+                    <option value='nl'>Dutch - Nederlands</option>
+                    <option value='en'>English</option>
+                    <option value='eo'>Esperanto - esperanto</option>
+                    <option value='et'>Estonian - eesti</option>
+                    <option value='tl'>Filipino</option>
+                    <option value='fi'>Finnish - suomi</option>
+                    <option value='fr'>French - français</option>
+                    <option value='gl'>Galician - galego</option>
+                    <option value='ka'>Georgian - ქართული</option>
+                    <option value='de'>German - Deutsch</option>
+                    <option value='el'>Greek - Ελληνικά</option>
+                    <option value='gu'>Gujarati - ગુજરાતી</option>
+                    <option value='ht'>Haitian Creole - kreyòl ayisyen</option>
+                    <option value='iw'>Hebrew - ‎‫עברית‬‎</option>
+                    <option value='hi'>Hindi - हिन्दी</option>
+                    <option value='hu'>Hungarian - magyar</option>
+                    <option value='is'>Icelandic - íslenska</option>
+                    <option value='id'>Indonesian - Bahasa Indonesia</option>
+                    <option value='ga'>Irish - Gaeilge</option>
+                    <option value='it'>Italian - italiano</option>
+                    <option value='ja'>Japanese - 日本語</option>
+                    <option value='kn'>Kannada - ಕನ್ನಡ</option>
+                    <option value='ko'>Korean - 한국어</option>
+                    <option value='la'>Latin - Lingua Latina</option>
+                    <option value='lv'>Latvian - latviešu</option>
+                    <option value='lt'>Lithuanian - lietuvių</option>
+                    <option value='mk'>Macedonian - македонски</option>
+                    <option value='ms'>Malay - Bahasa Melayu</option>
+                    <option value='mt'>Maltese - Malti</option>
+                    <option value='no'>Norwegian - norsk</option>
+                    <option value='fa'>Persian - ‎‫فارسی‬‎</option>
+                    <option value='pl'>Polish - polski</option>
+                    <option value='pt'>Portuguese - português</option>
+                    <option value='ro'>Romanian - română</option>
+                    <option value='ru'>Russian - русский</option>
+                    <option value='sr'>Serbian - Српски</option>
+                    <option value='sk'>Slovak - slovenčina</option>
+                    <option value='sl'>Slovenian - slovenščina</option>
+                    <option value='es'>Spanish - español</option>
+                    <option value='sw'>Swahili - Kiswahili</option>
+                    <option value='sv'>Swedish - svenska</option>
+                    <option value='ta'>Tamil - தமிழ்</option>
+                    <option value='te'>Telugu - తెలుగు</option>
+                    <option value='th'>Thai - ไทย</option>
+                    <option value='tr'>Turkish - Türkçe</option>
+                    <option value='uk'>Ukrainian - українська</option>
+                    <option value='ur'>Urdu - ‎‫اردو‬‎</option>
+                    <option value='vi'>Vietnamese - Tiếng Việt</option>
+                    <option value='cy'>Welsh - Cymraeg</option>
+                    <option value='yi'>Yiddish - יידיש</option>
+                </select>
+                <label id="lb_view-mode" for="view-mode"></label>
+                <select id="view-mode" tabindex="2"></select>
+                <p id="message"></p>
+            </form>
+        </div>
+    </body>
 </html>

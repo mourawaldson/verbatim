@@ -86,6 +86,16 @@ var Core = {
 
             if (ft) Core.openUrl('./content/settings.html', true);
         },
+        save: function() {
+            Core.localStorage.saveTranslateToLanguage(Core.getSelectedValue(document.querySelector('#languages')));
+            Core.localStorage.saveViewMode(Core.getSelectedValue(document.querySelector('#view-mode')));
+
+            var message = document.querySelector('#message');
+            message.innerHTML = chrome.i18n.getMessage('automatic_save');
+            setTimeout(function() {
+                message.innerHTML = '';
+            }, 1200);
+        },
         getTranslateToLanguage: function() {
             return (Core.localStorage.exists('tl')) ? Core.localStorage.getValue('tl') : Core.settings.normalizeLanguageCode(window.navigator.language);
         },
@@ -120,7 +130,7 @@ var Core = {
         loadSupportedViewModes: function() {
             var svm = document.querySelector('#view-mode');
             var options = {
-                'tt': chrome.i18n.getMessage('view_mode_tt'),
+                //'tt': chrome.i18n.getMessage('view_mode_tt'),
                 'ont': chrome.i18n.getMessage('view_mode_ont'),
                 'ognt': chrome.i18n.getMessage('view_mode_ognt')
             };
@@ -139,18 +149,27 @@ var Core = {
             document.querySelector('#lb_translate_to').innerHTML = chrome.i18n.getMessage('translate_to');
             document.querySelector('#lb_view-mode').innerHTML = chrome.i18n.getMessage('view_mode');
 
-            Core.changeElementsVisibility();
-        },
-        save: function() {
-            Core.localStorage.saveTranslateToLanguage(Core.getSelectedValue(document.querySelector('#languages')));
-            Core.localStorage.saveViewMode(Core.getSelectedValue(document.querySelector('#view-mode')));
+            document.querySelector('#languages').addEventListener('change', function() {
+                Core.settings.save();
+                trackLanguage();
+            });
 
-            var message = document.querySelector('#message');
-            message.innerHTML = chrome.i18n.getMessage('automatic_save');
-            setTimeout(function() {
-                message.innerHTML = '';
-            }, 1200);
+            document.querySelector('#view-mode').addEventListener('change', function() {
+                Core.settings.save();
+                trackViewMode();
+            });
+
+            document.onreadystatechange = function() {
+                if (document.readyState == 'complete') {
+                    Core.changeElementsVisibility();
+                }
+            }
         }
-
+    },
+    background: {
+        init: function() {
+            Core.settings.open();
+            Core.createContextMenu();
+        }
     }
 };
