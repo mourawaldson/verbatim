@@ -42,11 +42,11 @@ var Core = {
         var labels = document.getElementsByTagName('label');
 
         for (var i = 0; i < selects.length; i++) {
-            selects[i].style.visibility = 'visible';
+            selects[i].className = 'visible';
         }
 
         for (var i = 0; i < labels.length; i++) {
-            labels[i].style.visibility = 'visible';
+            labels[i].className = 'visible';
         }
     },
     translate: function(info) {
