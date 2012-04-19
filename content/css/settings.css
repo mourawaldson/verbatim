@@ -18,6 +18,10 @@ body {
 	font-size: 13px;
 }
 
+.visibile {
+    visibility: visible;
+}
+
 select, label {
     visibility: hidden;
 }
