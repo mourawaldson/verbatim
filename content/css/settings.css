@@ -22,6 +22,6 @@ body {
     visibility: visible;
 }
 
-select, label {
+.hidden {
     visibility: hidden;
 }
