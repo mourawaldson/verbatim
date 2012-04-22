@@ -137,8 +137,10 @@ var Core = {
 
             Core.populateSelect(svm, options);
             Core.setSelectedValue(svm, Core.settings.getViewMode());
-        },
-        init: function() {
+        }
+    },
+    init: function() {
+        document.addEventListener("DOMContentLoaded", function() {
             Core.settings.loadSupportedLanguages();
             Core.settings.loadSupportedViewModes();
 
@@ -164,12 +166,8 @@ var Core = {
                     Core.changeElementsVisibility();
                 }
             }
-        }
-    },
-    background: {
-        init: function() {
-            Core.settings.open();
-            Core.createContextMenu();
-        }
+        });
     }
 };
+
+Core.init();
