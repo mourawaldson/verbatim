@@ -2,7 +2,7 @@
     "default_locale": "en",
     "name": "__MSG_name__",
     "description": "__MSG_description__",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "permissions": ["contextMenus"],
     "background_page": "content/background.html",
     "options_page": "content/settings.html",
@@ -11,5 +11,6 @@
         "48": "content/images/verbatim-48x48.png",
         "128": "content/images/verbatim-128x128.png"
     },
-    "minimum_chrome_version": "6.0.0.0"
+    "minimum_chrome_version": "6.0.0.0",
+    "content_security_policy": "default-src 'self' https://ssl.google-analytics.com http://translate.google.com; img-src 'self' http://www.google-analytics.com"
 }
