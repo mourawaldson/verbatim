@@ -18,3 +18,7 @@ function trackLanguage() {
 function trackViewMode(value) {
     _gaq.push(['_trackEvent', 'View Mode: ' + Core.getSelectedTextContent(document.querySelector('#view-mode')), 'changed']);
 };
+
+function trackTranslate() {
+    _gaq.push(['_trackEvent', 'Translate', 'clicked']);
+};
