@@ -1,3 +1,5 @@
 h2. Verbatim Translatio
 
 h3. An extension of Google Chrome to translate the selected text by clicking with the right mouse button!
+
+"!http://api.coderwall.com/mourawaldson/endorse.png!":http://coderwall.com/mourawaldson

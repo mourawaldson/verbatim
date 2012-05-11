@@ -2,7 +2,7 @@
     "default_locale": "en",
     "name": "__MSG_name__",
     "description": "__MSG_description__",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "permissions": ["contextMenus"],
     "background_page": "content/background.html",
     "options_page": "content/settings.html",

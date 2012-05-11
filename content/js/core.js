@@ -57,6 +57,8 @@ var Core = {
             var url = "http://translate.google.com/#" + from + "|" + Core.settings.getTranslateToLanguage() + "|" + encodeURI(info.selectionText);
             Core.openUrl(url, (vm == 'ognt') ? true : false);
         }
+
+        trackTranslate();
     },
     localStorage: {
         saveTranslateToLanguage: function(value) {
