@@ -50,11 +50,13 @@ var Core = {
         }
     },
     translate: function(info) {
+        var text = info.selectionText;
+
         var vm = Core.settings.getViewMode();
-        var from = (info.selectionText.toLowerCase() !== chrome.i18n.getMessage('name').toLowerCase()) ? 'auto' : 'la';
+        var from = (text.toLowerCase() !== chrome.i18n.getMessage('name').toLowerCase()) ? 'auto' : 'la';
 
         if (vm !== 'tt') {
-            var url = "http://translate.google.com/#" + from + "|" + Core.settings.getTranslateToLanguage() + "|" + encodeURI(info.selectionText);
+            var url = "http://translate.google.com/#" + from + "|" + Core.settings.getTranslateToLanguage() + "|" + encodeURIComponent(text);
             Core.openUrl(url, (vm === 'ognt') ? true : false);
         }
 
