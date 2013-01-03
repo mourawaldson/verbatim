@@ -1,5 +1,9 @@
-h2. Verbatim Translatio
+h2. "Verbatim Translatio":https://chrome.google.com/webstore/detail/bobgnmijljonenlachekpkgikohcghon
 
 h3. An extension of Google Chrome to translate the selected text by clicking with the right mouse button!
 
 "!http://api.coderwall.com/mourawaldson/endorse.png!":http://coderwall.com/mourawaldson
+
+h2. License
+
+"Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License":http://creativecommons.org/licenses/by-nc-sa/3.0/

@@ -21,7 +21,7 @@ var Core = {
     setSelectedValue: function(select, value) {
         for (var i = 0; i < select.children.length; i++) {
             var child = select.children[i];
-            if (child.value == value) {
+            if (child.value === value) {
                 child.selected = true;
                 break;
             }
@@ -45,17 +45,19 @@ var Core = {
             selects[i].className = 'visible';
         }
 
-        for (var i = 0; i < labels.length; i++) {
-            labels[i].className = 'visible';
+        for (var j = 0; j < labels.length; j++) {
+            labels[j].className = 'visible';
         }
     },
     translate: function(info) {
-        var vm = Core.settings.getViewMode();
-        var from = (info.selectionText.toLowerCase() != chrome.i18n.getMessage('name').toLowerCase()) ? 'auto' : 'la';
+        var text = info.selectionText;
 
-        if (vm != 'tt') {
-            var url = "http://translate.google.com/#" + from + "|" + Core.settings.getTranslateToLanguage() + "|" + encodeURI(info.selectionText);
-            Core.openUrl(url, (vm == 'ognt') ? true : false);
+        var vm = Core.settings.getViewMode();
+        var from = (text.toLowerCase() !== chrome.i18n.getMessage('name').toLowerCase()) ? 'auto' : 'la';
+
+        if (vm !== 'tt') {
+            var url = "http://translate.google.com/#" + from + "|" + Core.settings.getTranslateToLanguage() + "|" + encodeURIComponent(text);
+            Core.openUrl(url, (vm === 'ognt') ? true : false);
         }
 
         trackTranslate();
@@ -86,7 +88,9 @@ var Core = {
                 ft = true;
             }
 
-            if (ft) Core.openUrl('./content/settings.html', true);
+            if (ft) {
+                Core.openUrl('./content/settings.html', true);
+            }
         },
         save: function() {
             Core.localStorage.saveTranslateToLanguage(Core.getSelectedValue(document.querySelector('#languages')));
@@ -102,22 +106,32 @@ var Core = {
             return (Core.localStorage.exists('tl')) ? Core.localStorage.getValue('tl') : Core.settings.normalizeLanguageCode(window.navigator.language);
         },
         getViewMode: function() {
-            return (Core.localStorage.exists('vm')) ? Core.localStorage.getValue('vm') : 'ognt';
+            return (Core.localStorage.exists('vm')) ? Core.localStorage.getValue('vm') : 'ont';
         },
         supportedLocale: function(code) {
             var supported_locales = ['ar', 'bg', 'ca', 'cs', 'da', 'de', 'el', 'en', 'en-GB', 'en-US', 'es', 'es-419', 'et', 'fi', 'fil', 'fr', 'he', 'hi', 'hr', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nl', 'no', 'pl', 'pt-BR', 'pt-PT', 'ro', 'ru', 'sk', 'sl', 'sr', 'sv', 'th', 'tl', 'tr', 'uk', 'vi', 'zh-CN', 'zh-TW'];
 
-            return supported_locales.indexOf(code) != -1;
+            return supported_locales.indexOf(code) !== -1;
         },
         normalizeLanguageCode: function(code) {
-            if (code.toLowerCase() == 'zh-tw') return 'zh-TW';
-            if (code.toLowerCase() == 'zh-cn') return 'zh-CN';
-            if (code.length >= 2 && Core.settings.supportedLocale(code)) return code.substr(0, 2);
-            else return 'en';
+            if (code.toLowerCase() === 'zh-tw') {
+                return 'zh-TW';
+            }
+
+            if (code.toLowerCase() === 'zh-cn') {
+                return 'zh-CN';
+            }
+
+            if (code.length >= 2 && Core.settings.supportedLocale(code)) {
+                return code.substr(0, 2);
+            }
+            else {
+                return 'en';
+            }
         },
         loadSupportedLanguages: function() {
             var script = document.createElement('script');
-            script.src = 'http://translate.google.com/translate_a/l?client=es' + '&cb=Core.settings.supportedLanguagesCallback&hl=' + Core.settings.normalizeLanguageCode(window.navigator.language);
+            script.src = 'https://translate.google.com/translate_a/l?client=es&cb=Core.settings.supportedLanguagesCallback&hl=' + Core.settings.normalizeLanguageCode(window.navigator.language);
             document.querySelector('head').appendChild(script);
         },
         supportedLanguagesCallback: function(langs) {
@@ -164,10 +178,10 @@ var Core = {
             });
 
             document.onreadystatechange = function() {
-                if (document.readyState == 'complete') {
+                if (document.readyState === 'complete') {
                     Core.changeElementsVisibility();
                 }
-            }
+            };
         });
     }
 };
