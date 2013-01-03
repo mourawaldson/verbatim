@@ -106,7 +106,7 @@ var Core = {
             return (Core.localStorage.exists('tl')) ? Core.localStorage.getValue('tl') : Core.settings.normalizeLanguageCode(window.navigator.language);
         },
         getViewMode: function() {
-            return (Core.localStorage.exists('vm')) ? Core.localStorage.getValue('vm') : 'ognt';
+            return (Core.localStorage.exists('vm')) ? Core.localStorage.getValue('vm') : 'ont';
         },
         supportedLocale: function(code) {
             var supported_locales = ['ar', 'bg', 'ca', 'cs', 'da', 'de', 'el', 'en', 'en-GB', 'en-US', 'es', 'es-419', 'et', 'fi', 'fil', 'fr', 'he', 'hi', 'hr', 'hu', 'id', 'it', 'ja', 'ko', 'lt', 'lv', 'nl', 'no', 'pl', 'pt-BR', 'pt-PT', 'ro', 'ru', 'sk', 'sl', 'sr', 'sv', 'th', 'tl', 'tr', 'uk', 'vi', 'zh-CN', 'zh-TW'];
