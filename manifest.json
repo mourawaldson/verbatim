@@ -17,5 +17,5 @@
         "48": "content/images/verbatim-48x48.png",
         "128": "content/images/verbatim-128x128.png"
     },
-    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://translate.google.com; object-src 'self'"
 }

@@ -129,7 +129,7 @@ var Core = {
         },
         loadSupportedLanguages: function() {
             var script = document.createElement('script');
-            script.src = 'http://translate.google.com/translate_a/l?client=es' + '&cb=Core.settings.supportedLanguagesCallback&hl=' + Core.settings.normalizeLanguageCode(window.navigator.language);
+            script.src = 'https://translate.google.com/translate_a/l?client=es&cb=Core.settings.supportedLanguagesCallback&hl=' + Core.settings.normalizeLanguageCode(window.navigator.language);
             document.querySelector('head').appendChild(script);
         },
         supportedLanguagesCallback: function(langs) {
