@@ -9,7 +9,7 @@
         "tabs"
     ],
     "background": {
-        "page": "content/background.html"
+        "scripts": ["content/js/analytics.min.js","content/js/core.min.js","content/js/background.min.js"]
     },
     "options_page": "content/settings.html",
     "icons": {
