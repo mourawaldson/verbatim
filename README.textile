@@ -2,8 +2,8 @@ h2. "Verbatim Translatio":https://chrome.google.com/webstore/detail/bobgnmijljon
 
 h3. An extension of Google Chrome to translate the selected text by clicking with the right mouse button!
 
-"!http://api.coderwall.com/mourawaldson/endorse.png!":http://coderwall.com/mourawaldson
-
 h2. License
 
 "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License":http://creativecommons.org/licenses/by-nc-sa/3.0/
+
+:warning: IMPORTANT NOTE: THIS EXTENSION HAS BEEN SOLD AND THE OWNERSHIP TRANSFERED ON JANUARY 11, 2017. SINCE THEN, THIS EXTENSION IS NOT MAINTAINED NOR SUPPORTED BY "Waldson Moura". BY THE DATE INFORMED PREVIOUSLY, THE NEW OWNER IS RESPONSIBLE FOR ANY CHANGE THAT MIGHT AFFECT THE USERS.
